@@ -1,334 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acctentity Consultancy | Your Numbers. Our Expertise. Greater Possibilities.</title>
-<meta name="description" content="Bookkeeping, Accounting, Tax & eTIMS Compliance in Kenya. Accurate records. Better decisions. A stronger business.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--orange:#FF6B00;--black:#111111;--dark:#1A1A1A;--light:#FFF7F0;--gray:#666;--white:#fff;--green:#25D366}
-body{font-family:'Inter',sans-serif;color:var(--black);line-height:1.6;background:#fff}
-h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.2}
-a{text-decoration:none}
-.container{max-width:1150px;margin:0 auto;padding:0 20px}
-.btn{display:inline-block;padding:14px 28px;border-radius:50px;font-weight:700;font-size:15px;transition:.3s}
-.btn-orange{background:var(--orange);color:#fff}
-.btn-orange:hover{background:#e65f00;transform:translateY(-2px)}
-.btn-outline{border:2px solid #fff;color:#fff}
-.btn-dark{background:var(--black);color:#fff}
-.btn-green{background:var(--green);color:#fff}
-section{padding:80px 0}
-.section-tag{color:var(--orange);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:13px;margin-bottom:10px}
-.section-title{font-size:36px;margin-bottom:15px}
-.section-sub{color:var(--gray);max-width:650px;margin-bottom:40px}
-.center{text-align:center}
-.center .section-sub{margin:0 auto 40px}
-
-/* NAV */
-header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.06)}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-.logo{font-family:'Poppins',sans-serif;font-weight:800;font-size:22px}
-.logo span{color:var(--orange)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;color:var(--gray);font-weight:600}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:var(--black);font-weight:600;font-size:14px}
-.nav-links a:hover{color:var(--orange)}
-.nav-cta{padding:10px 20px;background:var(--black);color:#fff;border-radius:50px;font-weight:700;font-size:14px}
-.mobile-menu{display:none;font-size:26px;cursor:pointer}
-
-/* HERO */
-.hero{background:var(--black);color:#fff;padding:90px 0;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.hero h1{font-size:52px;margin-bottom:18px}
-.hero h1 span{color:var(--orange)}
-.hero p{color:#ccc;font-size:18px;margin-bottom:28px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-.trust-bar{display:flex;gap:10px;flex-wrap:wrap}
-.trust-bar span{background:#222;border:1px solid #333;padding:8px 14px;border-radius:50px;font-size:12px;font-weight:700}
-.hero-card{background:#fff;color:var(--black);border-radius:20px;padding:28px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
-.hero-card h3{margin-bottom:5px}
-.hero-card p{color:var(--gray);font-size:14px;margin-bottom:18px}
-.hero-card input,.hero-card select,.hero-card textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;margin-bottom:12px;font-family:inherit}
-.hero-card button{width:100%;border:none;cursor:pointer}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-img{background:var(--orange);border-radius:20px;height:380px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:30px}
-.about-img h3{font-size:32px}
-.promise-list{list-style:none;margin-top:20px}
-.promise-list li{padding:10px 0;border-bottom:1px solid #eee;font-weight:600}
-.promise-list li:before{content:"✓ ";color:var(--orange);font-weight:800}
-
-/* SERVICES */
-.services{background:var(--light)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.service-card{background:#fff;padding:28px;border-radius:18px;border:1px solid #ffe8d6}
-.service-card .icon{font-size:32px;margin-bottom:12px}
-.service-card h3{margin-bottom:10px;font-size:19px}
-.service-card p{color:var(--gray);font-size:14px;margin-bottom:14px}
-.service-card a{color:var(--orange);font-weight:700;font-size:14px}
-
-/* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.why-box{background:var(--black);color:#fff;padding:24px;border-radius:16px;text-align:center}
-.why-box h3{font-size:16px;margin:10px 0 8px}
-.why-box p{font-size:13px;color:#bbb}
-
-/* PROCESS */
-.process{background:#fff}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.step{border:2px dashed #ffd9b8;border-radius:18px;padding:26px;text-align:center;position:relative}
-.step-num{width:50px;height:50px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;margin:0 auto 14px}
-
-/* SERVE */
-.serve{background:var(--black);color:#fff}
-.serve-tags{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.serve-tags span{background:#222;border:1px solid #333;padding:12px 20px;border-radius:50px;font-size:14px;font-weight:600}
-
-/* TESTIMONIALS */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.testi{background:#fff;border:1px solid #eee;border-radius:18px;padding:26px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
-.testi p{font-style:italic;color:#333;margin-bottom:16px}
-.testi strong{display:block}
-.testi small{color:var(--gray)}
-
-/* FAQ */
-.faq{max-width:750px;margin:0 auto}
-.faq-item{border:1px solid #eee;border-radius:12px;margin-bottom:12px;overflow:hidden}
-.faq-q{padding:18px 20px;background:#fff;font-weight:700;cursor:pointer;display:flex;justify-content:space-between}
-.faq-a{padding:0 20px 18px;color:var(--gray);font-size:14px;display:none}
-.faq-item.open .faq-a{display:block}
-
-/* CONTACT */
-.contact{background:var(--light)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-info h2{margin-bottom:16px}
-.contact-info p{margin-bottom:10px;color:var(--gray)}
-.contact-form{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;margin-bottom:12px}
-.contact-form button{width:100%;border:none;cursor:pointer}
-footer{background:#111;color:#bbb;padding:40px 0;text-align:center;font-size:14px}
-footer strong{color:#fff}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-.services-grid{grid-template-columns:repeat(2,1fr)}
-.why-grid{grid-template-columns:repeat(2,1fr)}
-.steps,.testi-grid{grid-template-columns:1fr}
-.hero h1{font-size:38px}
-.nav-links{display:none}
-.mobile-menu{display:block}
-.section-title{font-size:28px}
-}
-@media(max-width:550px){.services-grid{grid-template-columns:1fr}}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acctentity Consultancy - Accounting & Tax Services in Kenya</title>
+<meta name="description" content="Acctentity Consultancy offers accounting, bookkeeping, tax, audit, financial advisory, company registration and ERP solutions in Nairobi, Kenya.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AccountingService","name":"Acctentity Consultancy","telephone":"+254746728341","image":"assets/img/logo.png","address":{"@type":"PostalAddress","streetAddress":"Greenhouse, Ngong Road","addressLocality":"Nairobi","addressCountry":"KE"},"areaServed":"Kenya"}</script>
 </head>
 <body>
-
-<header>
-<div class="container">
-<nav>
-<div class="logo">ACCT<span>ENTITY</span> <small>CONSULTANCY</small></div>
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#why">Why Us</a></li>
-<li><a href="#process">How It Works</a></li>
-<li><a href="#faq">FAQ</a></li>
+<header><div class="w nav" id="nav">
+<a href="index.html" aria-label="Acctentity Consultancy home"><img src="assets/img/logo.png" alt="Acctentity Consultancy"></a>
+<ul id="menu">
+<li><a href="index.html" class="on" aria-current="page" data-p="home">Home</a></li><li><a href="about.html" data-p="about">About</a></li>
+<li class="dd"><a href="services.html" data-p="services">Services &#9662;</a><ul class="sub"><li><a href="accounting.html" data-p="accounting">Accounting &amp; Bookkeeping</a></li><li><a href="tax.html" data-p="tax">Tax &amp; Compliance</a></li><li><a href="advisory.html" data-p="advisory">Financial Advisory</a></li><li><a href="audit.html" data-p="audit">Audit &amp; Assurance</a></li></ul></li>
+<li><a href="company-registration.html" data-p="registration">Company Registration</a></li><li><a href="erp-solutions.html" data-p="erp">ERP Solutions</a></li><li><a href="insights.html" data-p="insights">Insights</a></li><li><a href="contact.html" data-p="contact">Contact</a></li>
 </ul>
-<a class="nav-cta" href="#contact">Free Consultation</a>
-<div class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">☰</div>
-</nav>
-</div>
-</header>
+<a class="btn" href="contact.html">Get a consultation</a>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+</div></header>
+<main>
 
-<!-- HERO -->
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<div class="section-tag">Accounting • Bookkeeping • Tax • eTIMS</div>
-<h1>Your Numbers.<br>Our Expertise.<br><span>Greater Possibilities.</span></h1>
-<p>Accurate records. Better decisions. A stronger business. We handle your bookkeeping, accounting, tax and eTIMS compliance — so you can focus on growing your business.</p>
-<div class="hero-btns">
-<a href="#contact" class="btn btn-orange">Book a Free Consultation</a>
-<a href="#services" class="btn btn-outline">Explore Our Services</a>
+<div class="hero"><div class="w">
+<div><div class="loc">Acctentity Consultancy, Nairobi, Kenya</div>
+<h1>Your trusted partner in accounting, tax and financial solutions</h1>
+<p>We help businesses take control of their finances, stay compliant and make informed decisions through professional accounting, taxation, audit, financial advisory and ERP solutions.</p>
+<p>From managing your books to registering your company and setting up accounting systems, we support your business at every stage.</p>
+<div class="row"><a class="btn" href="contact.html">Get a consultation</a><a class="btn ghost" href="services.html">Explore our services</a></div></div>
+<div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><svg viewBox="0 0 300 340" preserveAspectRatio="none"><path d="M10 330 C70 250 130 190 230 90 L290 40" vector-effect="non-scaling-stroke"/></svg></div>
+</div></div>
+<section><div class="w split"><div><div class="kick">Who we are</div><h2>Making financial management easier for your business</h2><a class="btn" href="about.html">Learn more about us</a></div>
+<div><p>Running a successful business takes more than revenue. It takes proper financial management, accurate records, tax compliance and informed decisions.</p><p>At Acctentity Consultancy we understand the financial and administrative challenges businesses face. We provide professional accounting and business support that helps organisations operate efficiently, stay compliant and grow sustainably.</p><p>Whether you are starting a business, running an established company or improving your financial systems, we support you with practical expertise and reliable solutions.</p></div></div></section>
+<section class="soft"><div class="w"><div class="kick">What we do</div><h2>Comprehensive financial and business solutions</h2>
+<div class="grid" id="homesvc" style="margin-top:32px"><div class="svc"><h3>Accounting & Bookkeeping</h3><p>Accurate financial record management, bookkeeping, financial statements, reconciliations and management accounts.</p><a class="more" href="accounting.html">Explore accounting & bookkeeping</a></div><div class="svc"><h3>Tax & Compliance</h3><p>Support with VAT, PAYE, corporate tax, tax returns, tax advisory and KRA compliance.</p><a class="more" href="tax.html">Explore tax & compliance</a></div><div class="svc"><h3>Financial Advisory</h3><p>Financial analysis, budgeting, forecasting, business valuation and strategic financial guidance.</p><a class="more" href="advisory.html">Explore financial advisory</a></div><div class="svc"><h3>Audit & Assurance</h3><p>External audit, internal audit, financial statement reviews and internal controls assessment.</p><a class="more" href="audit.html">Explore audit & assurance</a></div></div>
+<div class="tiles"><div class="tile"><b>Company registration and corporate secretarial services</b><a href="company-registration.html">View company services</a></div><div class="tile"><b>ERP installation and management</b><a href="erp-solutions.html">View ERP solutions</a></div></div></div></section>
+<section><div class="w"><div class="kick">The Acctentity advantage</div><h2>Professional expertise. Practical solutions. Lasting value.</h2>
+<div class="why" style="margin-top:28px"><div><h3>Professional expertise</h3><p>Accounting and financial knowledge applied to the challenges businesses face.</p></div><div><h3>Compliance focused</h3><p>We help you understand and manage your financial and statutory obligations.</p></div><div><h3>Technology driven</h3><p>Financial expertise combined with ERP systems and technology solutions.</p></div><div><h3>Client focused</h3><p>Practical solutions built around your individual requirements.</p></div></div></div></section>
+<section class="soft"><div class="w"><h2>Supporting businesses across different industries</h2>
+<ul class="serve" style="margin-top:24px"><li><b>Startups and entrepreneurs</b><span>Establish proper accounting and compliance foundations.</span></li><li><b>Small and medium enterprises</b><span>Improve financial management and business performance.</span></li><li><b>Retail and trading businesses</b><span>Accounting, inventory-related systems and financial reporting.</span></li><li><b>Professional service firms</b><span>Reliable accounting, taxation and financial advisory.</span></li><li><b>NGOs and organisations</b><span>Financial reporting, accounting and audit support.</span></li><li><b>Established companies</b><span>Stronger financial controls, systems and reporting structures.</span></li></ul></div></section>
+<section><div class="w"><h2>A straightforward approach to better financial management</h2><div class="steps"><div><h3>Understand your needs</h3><p>We begin with your business, financial challenges and objectives.</p></div><div><h3>Assess and analyse</h3><p>We review the relevant financial information, systems and requirements.</p></div><div><h3>Develop solutions</h3><p>We recommend practical services that address your needs.</p></div><div><h3>Deliver and support</h3><p>We deliver the agreed services and support you where required.</p></div></div></div></section>
+<section class="soft"><div class="w"><div class="kick">Knowledge and resources</div><h2>Insights that help your business move forward</h2><p>Guidance on accounting, taxation, financial management and business compliance.</p><a class="btn" href="insights.html">Explore all insights</a></div></section>
 </div>
-<div class="trust-bar">
-<span>✓ Accurate</span><span>✓ Compliant</span><span>✓ Profitable</span><span>✓ Confidential & Secure</span>
-</div>
-</div>
-<div class="hero-card">
-<h3>Get Your Free Consultation</h3>
-<p>Tell us about your business and we will recommend the right package.</p>
-<form onsubmit="sendWhatsApp(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="text" id="business" placeholder="Business Name" required>
-<input type="tel" id="phone" placeholder="Phone / WhatsApp" required>
-<select id="service" required>
-<option value="">Select Service Needed</option>
-<option>Bookkeeping</option>
-<option>Accounting & Reporting</option>
-<option>Tax & Compliance</option>
-<option>eTIMS Compliance</option>
-<option>ERP Systems</option>
-<option>Financial Analysis</option>
-</select>
-<textarea id="msg" rows="3" placeholder="Tell us about your needs..."></textarea>
-<button type="submit" class="btn btn-green">Request on WhatsApp →</button>
-</form>
-<p style="font-size:12px;text-align:center;margin-top:10px;">Or call: <b>0746 728 341</b></p>
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<div class="container about-grid">
-<div class="about-img"><div><h3>Your Growth,<br>Our Priority.</h3><p style="margin-top:12px;color:#fff;opacity:.9">Nairobi • Serving Clients Across Kenya</p></div></div>
-<div>
-<div class="section-tag">About Us</div>
-<h2 class="section-title">We Don't Just Record Transactions. We Help You Grow.</h2>
-<p style="color:var(--gray)">Acctentity Consultancy is a Kenyan accounting and bookkeeping firm built for SMEs, startups, and growing businesses.</p>
-<p style="color:var(--gray);margin-top:12px">We believe great businesses are built on great numbers. When your books are clean, your taxes are compliant, and your reports are clear — you make better decisions, faster.</p>
-<ul class="promise-list">
-<li>Professional & Reliable service, every time</li>
-<li>Timely delivery — no missed deadlines</li>
-<li>Confidential & Secure handling of your data</li>
-<li>Simple, jargon-free advice you can actually use</li>
-</ul>
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services">
-<div class="container">
-<div class="center"><div class="section-tag">What We Do</div><h2 class="section-title">Services That Keep Your Business Compliant & Profitable</h2><p class="section-sub">From daily bookkeeping to KRA compliance, we handle the numbers so you don't have to.</p></div>
-<div class="services-grid">
-<div class="service-card"><div class="icon">📚</div><h3>Bookkeeping Services</h3><p>Daily recording, categorization and organization of your transactions. Clean books, always ready for review, audit or funding.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card"><div class="icon">📊</div><h3>Accounting & Reporting</h3><p>Monthly management accounts, P&L, balance sheet and cash flow reports that show exactly where your business stands.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card"><div class="icon">🧾</div><h3>Tax & Statutory Compliance</h3><p>VAT, PAYE, Withholding Tax, Corporate Tax and all KRA filings — on time, every time. Stay compliant and penalty-free.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card"><div class="icon">⚡</div><h3>eTIMS Compliance</h3><p>eTIMS onboarding, electronic invoicing setup, daily compliance support, record management & reconciliation.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card"><div class="icon">🏦</div><h3>Bank Reconciliations</h3><p>We match your bank statements to your books to catch errors, fraud and missing transactions early.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card"><div class="icon">📈</div><h3>Business & Financial Analysis</h3><p>Know your margins, best products and cash runway. We turn your data into clear insights and growth recommendations.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card"><div class="icon">💻</div><h3>ERP Systems Management</h3><p>Setup, cleanup and management of QuickBooks, Zoho, Sage, Xero and more.</p><a href="#contact">Get Started →</a></div>
-<div class="service-card" style="background:var(--black);color:#fff"><h3 style="color:#fff">Not Sure What You Need?</h3><p style="color:#bbb">Book a free consultation and we will build the right plan for you.</p><a href="#contact" style="color:var(--orange)">Talk to an Expert →</a></div>
-</div>
-</div>
-</section>
-
-<!-- WHY -->
-<section id="why">
-<div class="container">
-<div class="center"><div class="section-tag">Why Choose Us</div><h2 class="section-title">Let Us Handle Your Numbers, So You Can Focus On Your Business.</h2></div>
-<div class="why-grid">
-<div class="why-box"><div>⏰</div><h3>Save Time</h3><p>No more late nights doing books</p></div>
-<div class="why-box"><div>✅</div><h3>Stay Compliant</h3><p>Never miss a KRA deadline again</p></div>
-<div class="why-box"><div>💰</div><h3>Save Money</h3><p>Avoid penalties, find savings</p></div>
-<div class="why-box"><div>📊</div><h3>Grow With Confidence</h3><p>Clear reports for smart decisions</p></div>
-<div class="why-box"><div>🔄</div><h3>Flexible Plans</h3><p>From startups to established SMEs</p></div>
-</div>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="process">
-<div class="container">
-<div class="center"><div class="section-tag">How It Works</div><h2 class="section-title">Simple. Fast. Stress-Free.</h2></div>
-<div class="steps">
-<div class="step"><div class="step-num">1</div><h3>Free Consultation</h3><p style="color:var(--gray);font-size:14px">Tell us about your business on a free call or WhatsApp chat.</p></div>
-<div class="step"><div class="step-num">2</div><h3>We Build Your Plan</h3><p style="color:var(--gray);font-size:14px">We recommend a monthly package based on your transactions.</p></div>
-<div class="step"><div class="step-num">3</div><h3>We Take Over Your Books</h3><p style="color:var(--gray);font-size:14px">Send receipts, invoices and statements. We handle the rest.</p></div>
-<div class="step"><div class="step-num">4</div><h3>You Get Clear Reports</h3><p style="color:var(--gray);font-size:14px">Monthly reports, reminders and support whenever you need us.</p></div>
-</div>
-</div>
-</section>
-
-<!-- SERVE -->
-<section class="serve">
-<div class="container center">
-<div class="section-tag">Who We Serve</div>
-<h2 class="section-title" style="color:#fff">Built For Growing Kenyan Businesses</h2>
-<div class="serve-tags">
-<span>Startups & SMEs</span><span>Retail & E-commerce</span><span>Service Providers</span><span>NGOs & Churches</span><span>Restaurants</span><span>Real Estate</span><span>Freelancers & Creators</span>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section>
-<div class="container">
-<div class="center"><div class="section-tag">Testimonials</div><h2 class="section-title">What Our Clients Say</h2></div>
-<div class="testi-grid">
-<div class="testi"><p>"Acctentity cleaned up 8 months of messy books in 2 weeks. Now I finally understand my cash flow."</p><strong>Sarah M.</strong><small>Retail Business Owner, Nairobi</small></div>
-<div class="testi"><p>"They handle our eTIMS and VAT completely. No more KRA stress."</p><strong>Daniel K.</strong><small>Director, Logistics Company</small></div>
-<div class="testi"><p>"Professional, timely, and easy to work with on WhatsApp. Highly recommended."</p><strong>Faith W.</strong><small>Founder, Beauty Brand</small></div>
-</div>
-</div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" style="background:var(--light)">
-<div class="container">
-<div class="center"><div class="section-tag">FAQ</div><h2 class="section-title">Frequently Asked Questions</h2></div>
-<div class="faq">
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you work with businesses outside Nairobi? <span>+</span></div><div class="faq-a">Yes. We work 100% remotely via WhatsApp, email and Zoom with clients across Kenya.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What do I need to get started? <span>+</span></div><div class="faq-a">Just your business registration, recent bank statements, and any existing records. We will guide you through the rest.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What software do you use? <span>+</span></div><div class="faq-a">QuickBooks, Zoho Books, Xero, Sage and Excel — or we can work with your current system.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost? <span>+</span></div><div class="faq-a">Our monthly packages are tailored to your transaction volume. Book a free consultation for a custom quote.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can you help me with KRA penalties? <span>+</span></div><div class="faq-a">Yes. We can help you review, reconcile and resolve outstanding compliance issues.</div></div>
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-<div class="container contact-grid">
-<div class="contact-info">
-<div class="section-tag">Contact Us</div>
-<h2>Let's Talk About Your Numbers.</h2>
-<p>Ready for clean books and zero tax stress?</p>
-<p><b>Call / WhatsApp:</b> 0746 728 341</p>
-<p><b>Email:</b> hello@acctentity.co.ke</p>
-<p><b>Location:</b> Nairobi, Kenya — Serving Clients Nationwide</p>
-<p><b>Hours:</b> Mon - Fri: 8:00 AM - 5:00 PM | Sat: 9:00 AM - 1:00 PM</p>
-<br>
-<a href="https://wa.me/254746728341?text=Hi%20Acctentity%2C%20I%20need%20help%20with%20my%20books" target="_blank" class="btn btn-green">Chat on WhatsApp</a>
-</div>
-<div class="contact-form">
-<h3>Get Your Free Consultation</h3><br>
-<form onsubmit="sendWhatsApp(event)">
-<input type="text" placeholder="Your Name" required>
-<input type="text" placeholder="Business Name">
-<input type="tel" placeholder="Phone / WhatsApp" required>
-<select><option>Select Service</option><option>Bookkeeping</option><option>Tax</option><option>eTIMS</option><option>Accounting</option></select>
-<textarea rows="3" placeholder="Your Message"></textarea>
-<button type="submit" class="btn btn-orange">Request My Free Consultation</button>
-</form>
-</div>
-</div>
-</section>
-
-<footer>
-<strong>ACCTENTITY CONSULTANCY</strong><br>
-Accurate Records. Better Decisions. A Stronger Business.<br>
-© 2026 Acctentity Consultancy. All Rights Reserved.
-</footer>
-
-<script>
-function sendWhatsApp(e){
-e.preventDefault();
-var name=document.getElementById('name')?.value || '';
-var biz=document.getElementById('business')?.value || '';
-var phone=document.getElementById('phone')?.value || '';
-var service=document.getElementById('service')?.value || '';
-var msg=document.getElementById('msg')?.value || '';
-var text="Hi Acctentity, I am "+name+" from "+biz+". I need help with: "+service+". "+msg+" My number: "+phone;
-window.open("https://wa.me/254746728341?text="+encodeURIComponent(text),"_blank");
-}
-</script>
+</main>
+<footer><div class="w"><div class="g">
+<div><h3>Acctentity Consultancy</h3><p>Professional accounting, taxation, audit, financial advisory, company registration and ERP solutions for businesses in Kenya.</p></div>
+<div><h3>Quick links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="services.html">Services</a></li><li><a href="company-registration.html">Company registration</a></li><li><a href="erp-solutions.html">ERP solutions</a></li><li><a href="insights.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h3>Our services</h3><ul><li><a href="accounting.html">Accounting &amp; Bookkeeping</a></li><li><a href="tax.html">Tax &amp; Compliance</a></li><li><a href="advisory.html">Financial Advisory</a></li><li><a href="audit.html">Audit &amp; Assurance</a></li></ul></div>
+<div><h3>Contact</h3><ul><li>Greenhouse, Ngong Road, Nairobi, Kenya</li><li><a href="tel:+254746728341">0746 728 341</a></li></ul></div>
+</div><div class="c">&copy; 2026 Acctentity Consultancy. All rights reserved.</div></div></footer>
+<a class="wa" href="https://wa.me/254746728341" aria-label="Chat on WhatsApp">WhatsApp</a>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
