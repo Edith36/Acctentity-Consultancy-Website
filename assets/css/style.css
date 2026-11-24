@@ -179,3 +179,16 @@ footer{padding-bottom:84px}
 .nav.open .sub a{font-weight:400;font-size:.93rem;color:#5E5E5E;padding:4px 0}
 .nav.open>ul>li+li{border-top:1px solid var(--ln);padding-top:10px}
 }
+
+/* Contact page */
+.cinfo a:not(.btn){overflow-wrap:anywhere;font-weight:700;color:var(--od)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cinfo a:not(.btn){color:var(--o)}}
+.map{padding:0 0 88px}
+.map iframe{display:block;width:100%;height:clamp(280px,40vw,420px);border:0;border-radius:14px;background:var(--soft)}
+@media (max-width:900px){.map{padding-bottom:56px}}
+
+/* Inner page hero with background photo (tax) */
+.ph-tax{background:linear-gradient(90deg,rgba(20,20,20,.94) 0%,rgba(20,20,20,.78) 55%,rgba(20,20,20,.5) 100%),url(../img/tax-hero.webp) center/cover no-repeat,var(--k);padding:104px 0}
+.ph h1 em{color:var(--o)}
+.tile span{display:block}
+@media (max-width:900px){.ph-tax{background:linear-gradient(rgba(20,20,20,.85),rgba(20,20,20,.9)),url(../img/tax-hero.webp) 65% center/cover no-repeat,var(--k);padding:64px 0}}
