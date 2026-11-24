@@ -192,3 +192,29 @@ footer{padding-bottom:84px}
 .ph h1 em{color:var(--o)}
 .tile span{display:block}
 @media (max-width:900px){.ph-tax{background:linear-gradient(rgba(20,20,20,.85),rgba(20,20,20,.9)),url(../img/tax-hero.webp) 65% center/cover no-repeat,var(--k);padding:64px 0}}
+
+/* Services page hero (reuses hero-bg.webp, no new photo needed) */
+.ph-services{background:linear-gradient(90deg,rgba(20,20,20,.94) 0%,rgba(20,20,20,.78) 55%,rgba(20,20,20,.5) 100%),url(../img/hero-bg.webp) center/cover no-repeat,var(--k);padding:104px 0}
+@media (max-width:900px){.ph-services{background:linear-gradient(rgba(20,20,20,.85),rgba(20,20,20,.9)),url(../img/hero-bg.webp) 65% center/cover no-repeat,var(--k);padding:64px 0}}
+
+/* Reusable inner-page hero with photo (use class "ph ph-photo") */
+.ph-photo{background:linear-gradient(90deg,rgba(20,20,20,.94) 0%,rgba(20,20,20,.78) 55%,rgba(20,20,20,.5) 100%),url(../img/hero-bg.webp) center/cover no-repeat,var(--k);padding:104px 0}
+@media (max-width:900px){.ph-photo{background:linear-gradient(rgba(20,20,20,.85),rgba(20,20,20,.9)),url(../img/hero-bg.webp) 65% center/cover no-repeat,var(--k);padding:64px 0}}
+
+/* 5-step process (responsive) */
+.steps.five{grid-template-columns:repeat(5,1fr)}
+@media (max-width:1100px){.steps.five{grid-template-columns:repeat(3,1fr);gap:32px 0}.steps.five div::after{display:none}}
+@media (max-width:900px){.steps.five{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps.five{grid-template-columns:1fr}}
+
+/* 6-step process (3 x 2 on desktop, responsive) */
+.steps.six{grid-template-columns:repeat(3,1fr);gap:36px 0}
+.steps.six div::after{display:none}
+@media (max-width:900px){.steps.six{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps.six{grid-template-columns:1fr}}
+
+/* Insights topic cards */
+.posts a span{display:block;margin-top:10px;font:700 .9rem var(--b);color:var(--od)}
+.posts a span::after{content:" \2192"}
+.posts a:hover span{text-decoration:underline}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .posts a span{color:var(--o)}}
