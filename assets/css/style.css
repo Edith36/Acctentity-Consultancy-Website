@@ -137,7 +137,7 @@ input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--ln);
 .cols2{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .cols2 p{max-width:none;font-size:1.05rem;color:var(--mu)}
 .wide-photo{padding:0 0 88px}
-.wide-photo img{display:block;width:100%;height:clamp(300px,46vw,560px);object-fit:cover;border-radius:18px}
+.wide-photo img{display:block;width:100%;height:clamp(300px,46vw,560px);object-fit:cover;object-position:center 12%;border-radius:18px}
 @media (max-width:900px){.cols2{grid-template-columns:1fr;gap:0}.about-hero{padding:64px 0 24px}.wide-photo{padding-bottom:56px}}
 
 /* ===== Responsive hardening (all pages) ===== */
